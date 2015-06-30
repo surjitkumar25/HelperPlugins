@@ -2,7 +2,7 @@
     "name": "HelperPlugins/Utils",
     "type": "library",
     "description": "A Zend Framework 2 module helper functions.",
-    "license": "MIT"
+    "license": "MIT",
     "autoload": {
         "psr-0": {
             "Utils": "library/Utils/"
