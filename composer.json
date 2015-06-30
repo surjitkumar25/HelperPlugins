@@ -5,7 +5,7 @@
     "license": "MIT",
     "autoload": {
         "psr-0": {
-            "Utils": "Utils/"
+            "Utils\\": "library/"
         }
     }
 }
