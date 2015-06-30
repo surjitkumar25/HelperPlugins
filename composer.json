@@ -1,5 +1,5 @@
 {
-    "name": "helper-plugins/utils",
+    "name": "helper-plugins",
     "type": "library",
     "description": "A Zend Framework 2 module helper functions.",
     "license": "MIT",
