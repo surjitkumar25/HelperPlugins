@@ -379,6 +379,27 @@ class CommonUtils extends AbstractActionController
         
         return $randomNumber;
     }
+    
+    /**
+     * Method Generates api response array
+     *
+     * @param int $statusCode
+     * @param string$message
+     * @param array $data
+     * @return array
+     */
+    public function encodeJson($statusCode, $message, $data = [])
+    {
+        $status = $statusCode == 200 ? true : false;
+        $jsonArray = [
+            'success' => $status,
+            'code' => $statusCode,
+            'message' => $message,
+        ];
+        $jsonArray += $data;
+
+        return $jsonArray;
+    }
    /* public function sendMail()
     {
         $mail = new Mail\Transport\SmtpOptions(array(
