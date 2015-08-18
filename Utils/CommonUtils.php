@@ -415,5 +415,20 @@ class CommonUtils extends AbstractActionController
         ));
         return $mail;
     }*/
+    /**
+     * Method used to check/update first time installation steps.
+     *
+     * @param int $reWrite
+     * @return array
+     */
+    public function reWriteConfiguration($reWrite)
+    {
+        $configuration = file_get_contents(DBSETTING . 'config.ini');
+        if (strchr($configuration, "'" . $reWrite . "' => '0'")) {
+            $reconfiguration = str_replace("'" . $reWrite . "' => '0'", "'" . $reWrite . "' => '1'", $configuration);
+            file_put_contents(DBSETTING . 'config.ini', $reconfiguration);
+            echo "here";
+        }
+    }
 }
 
