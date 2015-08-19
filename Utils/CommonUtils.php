@@ -427,7 +427,6 @@ class CommonUtils extends AbstractActionController
         if (strchr($configuration, "'" . $reWrite . "' => '0'")) {
             $reconfiguration = str_replace("'" . $reWrite . "' => '0'", "'" . $reWrite . "' => '1'", $configuration);
             file_put_contents(DBSETTING . 'config.ini', $reconfiguration);
-            echo "here";
         }
     }
 }
